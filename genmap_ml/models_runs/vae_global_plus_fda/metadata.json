@@ -1,0 +1,13 @@
+{
+  "dataset": "genmap_ml\\datasets\\vae_train_dataset.csv",
+  "extra_dataset": "genmap_ml\\datasets\\FDA_Approved_structures.csv",
+  "smiles_col": "smiles",
+  "extra_smiles_col": "smiles",
+  "num_sequences_base": 99997,
+  "num_sequences_extra": 2584,
+  "num_sequences_combined": 102580,
+  "tokenizer": "genmap_ml\\models_runs\\vae_global_plus_fda\\tokenizer.json",
+  "model_path": "genmap_ml\\models_runs\\vae_global_plus_fda\\smiles_vae.pt",
+  "device": "cuda",
+  "args": {
+    "dataset": 

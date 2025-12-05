@@ -1,0 +1,22 @@
+{
+  "run_name": "vae_fda_biased_5",
+  "output_dir": "genmap_ml\\models\\vae_fda_biased",
+  "dataset": "genmap_ml\\datasets\\vae_train_dataset.csv",
+  "fda_dataset": "./genmap_ml/datasets/FDA_Approved_structures.csv",
+  "num_smiles_base": 100000,
+  "num_smiles_fda": 2584,
+  "num_smiles_total": 102584,
+  "fda_sampling_weight": 5.0,
+  "vocab_size": 61,
+  "max_length": 120,
+  "model_path": "genmap_ml\\models\\vae_fda_biased\\vae_fda_biased_5\\smiles_vae.pt",
+  "tokenizer_path": "genmap_ml\\models\\vae_fda_biased\\vae_fda_biased_5\\tokenizer.json",
+  "latent_dim": 64,
+  "hidden_dim": 512,
+  "num_layers": 1,
+  "epochs": 50,
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "device": "cuda",
+  "run_dir": "genmap_ml\\models\\vae_fda_biased\\vae_fda_biased_5"
+}
