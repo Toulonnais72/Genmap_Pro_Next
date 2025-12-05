@@ -1,0 +1,37 @@
+import sys
+import os
+import importlib
+
+def check_package(pkg):
+    try:
+        mod = importlib.import_module(pkg)
+        return f"✅ {pkg} (version: {getattr(mod, '__version__', 'unknown')})"
+    except ImportError:
+        return f"❌ {pkg} not installed"
+
+def main():
+    print("🔍 Environment check")
+    print("-" * 40)
+
+    # Path to Python executable
+    print(f"Python executable : {sys.executable}")
+    print(f"Python version    : {sys.version.split()[0]}")
+
+    # Try to guess conda env name from path
+    env_path = sys.executable
+    if "anaconda3" in env_path.lower():
+        try:
+            env_name = env_path.split("envs")[1].split(os.sep)[1]
+            print(f"Conda environment : {env_name}")
+        except Exception:
+            print("Conda environment : (could not detect, maybe base)")
+    else:
+        print("Conda environment : not detected (maybe venv)")
+
+    print("\n📦 Package check:")
+    packages = ["rdkit", "pandas", "numpy", "streamlit", "sklearn", "xgboost"]
+    for pkg in packages:
+        print("  ", check_package(pkg))
+
+if __name__ == "__main__":
+    main()

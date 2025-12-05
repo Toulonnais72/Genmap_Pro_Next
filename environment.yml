@@ -1,0 +1,27 @@
+name: genmap
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.21,<2.0
+  - pandas
+  - scikit-learn
+  - pytorch
+  - xgboost
+  - matplotlib
+  - requests
+  - requests-cache
+  - reportlab
+  - umap-learn
+  - streamlit
+  - rdkit
+  - pip:
+      - rdkit-pypi
+      - fpdf2
+      - pubchempy
+      - chembl_webresource_client
+      - torch>=2.1.0
+      - deepchem>=2.7.1  # Optional, enable for advanced molecular modeling pipelines
+      - torch-geometric>=2.4.0  # Optional, integrates graph neural nets if desired
