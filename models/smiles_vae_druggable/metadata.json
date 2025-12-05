@@ -1,0 +1,9 @@
+{
+  "dataset": "genmap_ml\\datasets\\vae_train_dataset.csv",
+  "smiles_col": "smiles",
+  "num_sequences": 99997,
+  "tokenizer": "models\\smiles_vae_druggable\\tokenizer.json",
+  "model_path": "models\\smiles_vae_druggable\\smiles_vae.pt",
+  "device": "cuda",
+  "args": {
+    "dataset": 
